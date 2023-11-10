@@ -1,0 +1,252 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container {
+    width: 100%;
+    /* height: 1; */
+    font-family: "system-ui";
+    /* background-color: aquamarine; */
+    z-index: 9999;
+    
+}
+
+.logo-img {
+    height: 80px;
+    width: 80px;
+    margin-left: 20px;
+}
+.search-bar {
+    height: 90px;
+    width: 100%;
+    background-color: rgb(0, 90, 60);
+    position: fixed;
+    display: flex;
+    justify-content:first baseline;
+    align-items: center;
+    background-image: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(77,121,9,1) 100%, rgba(0,212,255,1) 100%);
+    /* position: relative; */
+}
+
+
+input {
+    position: relative;
+    margin-left: 120px;
+    width: 340px;
+    height: 40px;
+    padding-left: 10px;
+    border: none;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+.search-btn{
+    position: absolute;
+    margin-left: 0px;
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background-color: hsl(53.06deg 81.22% 64.51%);
+}
+.email {
+    padding-left: 150px;
+    color: white;
+}
+.phone {
+    padding-left: 50px;
+    color: white;
+}
+.shopping {
+    margin-left: 100px;
+    position: relative;
+    /* text-align: right; */
+  }
+.shopping i {
+    color: white;
+    font-size: larger;
+    
+  }
+.shopping span {
+    background: hsl(53.06deg 81.22% 64.51%);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    position: absolute;
+    top: -15px;
+    left: 80%;
+    padding: 2px 8px;
+  }
+
+  .category-list{
+    width: 100%;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    top: 90px;
+    height: 50px;
+    position: fixed;
+    background-color: rgb(237, 237, 237);
+}
+  li a {
+    color: rgb(3, 41, 29);
+    text-decoration: none;
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 15px;
+    /* text-align: center; */
+
+  }
+ul ul {
+    visibility: hidden;
+}
+li a:hover{
+    background-color: hsl(53.06deg 81.22% 64.51%);
+
+}
+li a ul:hover a {
+    visibility: visible;
+} 
+.cate-active {
+    background-color:  hsl(53.06deg 81.22% 64.51%);
+}
+
+/* // List san pham */
+
+.list {
+    font-family: "system-ui";
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 20px;
+    row-gap: 20px;
+    padding-top: 180px;
+    /* width: 100%; */
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: #dce0e1;
+  }
+  .list .item {
+    text-align: center;
+    background-color: #dce0e1;
+    border-radius: 15px;
+    padding: 20px 20px 10px 20px;
+    box-shadow: 0 10px 20px rgb(92, 159, 86);
+    letter-spacing: 1px;
+  }
+  .list .item img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+  .list .item .title {
+    text-align: center;
+    font-weight: 600;
+  }
+  /* .list .item .price {
+    margin: 10px 20px;
+  } */
+  .list .item button {
+    background-color: #035b26;
+    color: white;
+    /* padding: 10px; */
+    height: 35px;
+    border-radius: 20px;
+    border: none;
+    font-size: larger;
+    width: 60%;
+    transition: 0.3s;
+
+  }
+
+ /* /// Gio hang */
+  .card {
+    font-family: "system-ui";
+    position: fixed;
+    top: 0;
+    left: 100%;
+    width: 500px;
+    background-color: rgb(2, 39, 32);
+    height: 100vh;
+    transition: 0.5s;
+    background-image: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(77,121,9,1) 100%, rgba(0,212,255,1) 100%);
+  }
+  .active .card {
+    left: calc(100% - 500px);
+    /*  phần tử sẽ được đặt ở một vị trí cách xa bên trái 
+      của phần cha một khoảng cách bằng 100% chiều rộng của phần cha, trừ đi 500px. */
+  }
+  .active .container {
+    transform: translateX(-200px);
+    /* được sử dụng để di chuyển phần tử theo hướng ngang trên trục x của hệ tọa độ.  */
+  }
+  .card h1 {
+    color: rgba(255, 255, 255, 0.811);
+    font-weight: 100;
+    padding-top: 20px;
+    height: 80px;
+    text-align: center;
+  }
+  .card .checkOut {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .card .checkOut div {
+    background-color: #e8bc0e;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  .card .checkOut div:nth-child(2) {
+    background-color: #1c1f25;
+    color: rgba(255, 255, 255, 0.811);
+  }
+  .listCard li {
+    margin-left: 15px;
+    margin-right: 15px;
+    color: rgba(255, 255, 255, 0.811);
+    list-style: none;
+
+ }
+  .listCard li div {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  .listCard li img {
+    width: 18%;
+    height: 18%;
+    border-radius: 5px;
+  }
+  .listCard li button {
+    background-color: #fff5;
+    border: none;
+    border-radius: 5px;
+    width: 30px;
+    height: 30px;
+  }
+  .listCard .count {
+    padding: 0 20px;
+  }
+  .cart-prodname {
+    text-align: left;
+  }
+  .listCard li div:nth-child(2) {
+   width: 200px;
+  }
+  
+
+

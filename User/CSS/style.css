@@ -1,0 +1,208 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container {
+    width: 100%;
+    height: 100vh;
+    font-family: "system-ui";
+    /* background-color: aquamarine; */
+    
+}
+
+.logo-img {
+    height: 80px;
+    width: 80px;
+    margin-left: 20px;
+}
+.search-bar {
+    height: 90px;
+    width: 100%;
+    background-color: rgb(0, 90, 60);
+    /* background-image: linear-gradient(to right, rgb(61, 249, 186), bullets ); */
+    position: fixed;
+    display: flex;
+    justify-content:first baseline;
+    align-items: center;
+    background-image: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(77,121,9,1) 100%, rgba(0,212,255,1) 100%);
+}
+/* .linear {
+  height: 90px;
+    background-image: linear-gradient(to right, rgb(11, 131, 91),rgb(63, 255, 197)  );
+    z-index: 999;
+} */
+
+
+input {
+    position: relative;
+    margin-left: 120px;
+    width: 350px;
+    height: 40px;
+    padding-left: 10px;
+    border: none;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+button {
+    position: absolute;
+    margin-left: 0px;
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background-color: hsl(53.06deg 81.22% 64.51%);
+}
+.email {
+    padding-left: 150px;
+    color: white;
+}
+.phone {
+    padding-left: 50px;
+    color: white;
+}
+.shopping {
+    margin-left: 100px;
+    position: relative;
+    /* text-align: right; */
+  }
+.shopping i {
+    color: white;
+    font-size: larger;
+    
+  }
+.shopping span {
+    background: hsl(53.06deg 81.22% 64.51%);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    position: absolute;
+    top: -15px;
+    left: 80%;
+    padding: 2px 8px;
+  }
+
+  .category-list{
+    width: 100%;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+top: 95px;
+    height: 40px;
+    position: fixed;
+}
+  li a {
+    color: rgb(3, 41, 29);
+    text-decoration: none;
+    text-transform: uppercase;
+    display: inline-block;
+    /* width: auto; */
+    padding: 15px 20px 15px 20px;
+
+  }
+ul ul {
+    visibility: hidden;
+}
+li a:hover{
+  background-color: hsl(53.06deg 81.22% 64.51%);
+
+}
+li a ul:hover a {
+    visibility: visible;
+} 
+
+/* Slideshow container */
+.slideshow-container {
+    top: 140px;
+    max-width: 80%;
+    position: relative;
+    margin: auto;
+    
+  }
+  
+  /* Hide the images by default */
+  .mySlides {
+    display: none;
+    
+  }
+
+  /* Next & previous buttons */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+  
+
+  /* Caption text */
+  .text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+  /* The dots/bullets/indicators */
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+  
+  /* Fading animation */
+  .fade {
+    
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+

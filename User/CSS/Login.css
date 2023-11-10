@@ -1,0 +1,94 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"); */
+
+:root {
+    --success-color: #2691d9;
+    --error-color: #e74c3c;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-image: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(77,121,9,1) 100%, rgba(0,212,255,1) 100%); 
+    height: 100vh;
+    overflow: hidden;
+    font-family: "system-ui";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .container {
+    width: 400px;
+    border: none;
+    border-radius: 10px;
+    background: white;
+    padding: 40px;
+  }
+  
+  .container h1 {
+    text-align: center;
+  }
+  
+  .form-control {
+    width: 100%;
+    margin-top: 40px;
+    position: relative;
+  }
+  
+  .form-control input {
+    width: 100%;  
+    /* tai sao lai phai setting width: thử thấy nếu ko set thì nó ngắn (tùy thuộc độ dài của text)  */
+    height: 40px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #adadad;
+  }
+  
+  .form-control span {
+    position: absolute;
+    border-bottom: 3px solid var(--success-color);
+    top: 38px;
+    left: 0;
+    width: 0%;
+    transition: 0.3s;
+  }
+  
+  .form-control.error small {
+    color: var(--error-color);
+  }
+  
+  .form-control.error input {
+    border-bottom: 2px solid var(--error-color);
+  }
+  
+  .btn-login {
+    width: 100%;
+    height: 50px;
+    border-radius: 25px;
+    border: none;
+    outline: none;
+    background: var(--success-color);
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 25px 0;
+    transition: 0.3s;
+  }
+  
+  .btn-login:hover {
+    background-color: #08609b;
+  }
+  
+  .signup-link {
+    text-align: center;
+  }
+  
+  .signup-link a {
+    color: var(--success-color);
+    text-decoration: none;
+  }
